@@ -1,0 +1,43 @@
+#
+# Create new user
+#
+http://localhost:5000
+Content-Type: application/json
+
+POST /api/users
+{
+	"email": "<email>",
+	"password": "<password>"
+}
+
+#
+# Login
+#
+http://localhost:5000
+Content-Type: application/json
+
+POST /api/login
+{
+	"email": "<email>",
+	"password": "<password>"
+}
+
+#
+# Get user
+#
+http://localhost:5000
+Content-Type: application/json
+Authorization: Bearer <token>
+
+GET /api/users/<id>
+
+#
+# Upload screenshot
+#
+http://localhost:5000
+Content-Type: multipart/form-data
+Authorization: Bearer <token>
+-F image=@<file>
+
+POST /api/images
+

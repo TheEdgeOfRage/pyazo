@@ -1,0 +1,21 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - build
+
+before_script:
+  - docker login -u gitlab -p $CI_BUILD_TOKEN hub.theedgeofrage.com
+
+build:
+  stage: build
+  tags:
+    - docker
+  only:
+    - master
+  script:
+    - docker build --pull -t hub.theedgeofrage.com/pyazo/backend .
+    - docker push hub.theedgeofrage.com/pyazo/backend
+

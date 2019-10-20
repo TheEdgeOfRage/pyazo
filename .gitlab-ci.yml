@@ -1,12 +1,10 @@
 image: docker:latest
 
-services:
-  - docker:dind
-
 stages:
   - build
 
 before_script:
+  - docker info
   - docker login -u gitlab -p $CI_BUILD_TOKEN hub.theedgeofrage.com
 
 build:

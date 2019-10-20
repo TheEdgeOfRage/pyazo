@@ -1,0 +1,14 @@
+.git
+.gitignore
+.gitlab-ci.yml
+
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+api.rest
+.env-example
+
+LICENSE
+README.md
+

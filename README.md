@@ -1,3 +1,5 @@
+# THIS PROJECT HAS BEEN REWRITTEN AND MOVED TO [pyazo-screenshot](https://github.com/pyazo-screenshot)
+
 # Pyazo
 
 Pyazo is a self-hosted screenshot upload utility. It allows you to take a screenshot of part of your screen and automatically upload it to your own server.
